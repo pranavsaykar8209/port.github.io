@@ -1,0 +1,227 @@
+:root {
+    --primary: #3dcfd3;
+    --dark: #161616;
+    --pure: #ffffff;
+    --ternary: #898989;
+    --light: #f2f2f2;
+    --secondary: #070606;
+}
+
+@media(max-width:1024px) {
+    #main-nav {
+        display: none;
+    }
+}
+
+.site-main-wrapper {
+    position: relative;
+}
+
+.hamberger {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    z-index: 11;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: none;
+}
+
+.hambergerlogo {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    z-index: 11;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: none;
+}
+
+.hamberger img {
+    width: 30px;
+}
+
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+    background: var(--light);
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    padding-top: 5rem;
+    transform: translateX(-100%);
+    transition: all .5s ease-in-out;
+}
+
+
+/* IMPORTANAT FILE CLASS FOR APP.JS */
+
+.open {
+    transform: translateX(0);
+}
+
+.times {
+    position: fixed;
+    top: 30px;
+    right: 20px;
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.times img {
+    width: 30px;
+}
+
+.mobile-nav ul {
+    list-style-type: none;
+}
+
+.mobile-nav ul li a {
+    color: var(--secondary);
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+
+/* ------------------------------ALL CONTAINER RESPONSIVE----------------------------- */
+
+@media(min-width: 570px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media(min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media(min-width: 99px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media(min-width: 1200px) {
+    .container {
+        max-width: 1152px;
+    }
+}
+
+
+/* --------------FOR TABLET--------------- */
+
+@media(max-width:1024px) {
+    #main-nav {
+        display: none;
+    }
+    .hero .left img {
+        width: 260px;
+    }
+    .hero .right h1 {
+        font-size: 3rem;
+    }
+    .hero {
+        padding-top: 10rem;
+    }
+    .about-me-img {
+        height: 400px;
+    }
+    section.services .card-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    section.work .card-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .blog .container .card .content {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .blog {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 90%, 0 100%);
+    }
+    .blog .container {
+        padding-bottom: 100px;
+    }
+    .section-heading+p {
+        margin-bottom: 7rem;
+    }
+    .hamberger {
+        display: block;
+    }
+    .hambergerlogo {
+        display: block;
+    }
+}
+
+
+/* --------------FOR MOBLIE--------------- */
+
+@media (max-width:576px) {
+    .hero {
+        flex-direction: column;
+    }
+    header {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 80% 96%, 0 100%);
+    }
+    .flex-direction {
+        flex-direction: column;
+    }
+    .about .right {
+        text-align: center;
+        padding-top: 1rem;
+    }
+    section {
+        padding: 3rem 0;
+    }
+    section.services .card-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    section.work .card-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    section.freelance {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 90%, 0 100%);
+        padding-bottom: 6rem;
+    }
+    section.reviews .slider .slide {
+        padding: 0;
+    }
+    .blog {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 80% 96%, 0 100%);
+    }
+    section.contact .card-wrapper {
+        flex-direction: column;
+    }
+    section.contact .card-wrapper .card {
+        padding-bottom: 50px;
+    }
+    section.contact .input-wrap {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    footer .wrapper .icon {
+        margin-right: 10px;
+    }
+    #cources {
+        background-color: red !important;
+        padding: 1000px !important;
+    }
+    .section-heading+p {
+        margin-bottom: 6rem;
+    }
+    .hamberger {
+        display: block;
+    }
+    .hambergerlogo {
+        display: block;
+    }
+}

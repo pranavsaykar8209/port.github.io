@@ -1,0 +1,185 @@
+.footer {
+    padding-top: 0;
+    margin-top: 0;
+    position: relative;
+    text-align: center;
+    background: linear-gradient(60deg, rgba(84, 58, 183, 1) 0%, rgba(0, 172, 193, 1) 100%);
+    color: white;
+}
+
+.footer .inner-header {
+    /* height: 65vh; */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.footer .flex {
+    /*Flexbox for containers*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.footer .waves {
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    margin-bottom: -7px;
+    /*Fix for safari gap*/
+    min-height: 100px;
+    max-height: 150px;
+}
+
+
+/* .footer .content {
+    position: relative;
+    height: 20vh;
+    text-align: center;
+    background-color: white;
+} */
+
+
+/* Animation */
+
+.parallax>use {
+    animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+.parallax>use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+
+.parallax>use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+
+.parallax>use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+
+.parallax>use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+
+
+/*Shrinking for mobile*/
+
+@media (max-width: 768px) {
+    .waves {
+        height: 40px;
+        min-height: 40px;
+    }
+    .content {
+        height: 30vh;
+    }
+    h1 {
+        font-size: 24px;
+    }
+}
+
+
+/* ------------------------CONTACT US---------------------- */
+
+section.contact .container {
+    padding: 0 10%;
+}
+
+section.contact .container i {
+    font-size: 500%;
+    margin: 10px;
+    padding: 10px;
+    color: var(--primary);
+}
+
+section.contact .container .card:hover i {
+    color: red;
+}
+
+section.contact .container .card {
+    text-align: center;
+    cursor: pointer;
+}
+
+section.contact .container .card h6 {
+    color: var(--ternary);
+    font-family: 'Lato', sans-serif;
+    padding-top: 5px;
+    font-size: 1rem;
+}
+
+
+/* ---------------------INPUT TAGS------------------ */
+
+section.contact .input-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    padding-top: 100px;
+    margin-bottom: 2rem;
+}
+
+section.contact input {
+    padding: .5rem;
+    font-size: 1rem;
+    border: 0;
+    border: 2px solid var(--primary);
+    transition: all .5s ease;
+}
+
+section.contact .input-wrap input {
+    border: 0;
+    border-bottom: 2px solid var(--primary);
+}
+
+section.contact .input-wrap-2 {
+    display: flex;
+    flex-direction: column;
+}
+
+section.contact .input-wrap-2 input {
+    margin-bottom: 3rem;
+}
+
+section.contact .input-wrap-2 textarea {
+    padding: 0.5rem;
+    border: 0;
+    border: 2px solid var(--primary);
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    font-family: 'Lato';
+    transition: all .5s ease;
+}
+
+input:focus {
+    outline: none;
+    color: red;
+}
+
+textarea:focus {
+    outline: none;
+    color: red;
+}
+
+section.contact .btn-wrapper {
+    text-align: center;
+}
+
+section.contact .btn-wrapper .btn-secondary {
+    border-radius: 10px !important;
+    height: 60% !important;
+}
